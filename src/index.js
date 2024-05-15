@@ -16,12 +16,12 @@ import {
 
 dotenv.config();
 
-const app: Express = express();
+const app = express();
 app.use(morgan("combined"));
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.use(express.json());
 
-app.get("/", (_: Request, res: Response) => {
+app.get("/", (_, res) => {
   res.send("Dfns SDK Tutorial Server");
 });
 
