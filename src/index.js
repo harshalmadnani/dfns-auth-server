@@ -6,13 +6,13 @@ import * as express from "express";
 import * as asyncHandler from "express-async-handler";
 // import morgan from "morgan";
 import * as morgan from "morgan";
-import { login } from "./handlers/login";
-import { registerComplete, registerInit } from "./handlers/register";
+import { login } from "./handlers/login.js";
+import { registerComplete, registerInit } from "./handlers/register.js";
 import {
   generateSignatureComplete,
   generateSignatureInit,
   listWallets,
-} from "./handlers/wallets";
+} from "./handlers/wallets.js";
 
 dotenv.config();
 
