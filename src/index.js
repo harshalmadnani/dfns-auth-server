@@ -51,5 +51,8 @@ app.use(
 
 const port = process.env.EXPRESS_PORT;
 app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
+  console.log(
+    port,
+    `⚡️[server]: Server is running at http://localhost:${port}`
+  );
 });
