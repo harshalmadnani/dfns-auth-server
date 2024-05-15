@@ -1,6 +1,6 @@
-import { Request, Response } from "express";
+// import { Request, Response } from "express";
 
-import { apiClient } from "../clients";
+import { apiClient } from "../clients.js";
 
 export const login = async (req, res) => {
   // You can perform the login flow of your system before login the user

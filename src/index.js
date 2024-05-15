@@ -1,11 +1,13 @@
-// import cors from "cors";
-import * as cors from "cors";
+import cors from "cors";
+// import * as cors from "cors";
+
 import * as dotenv from "dotenv";
-import { Express, Request, Response } from "express";
-import * as express from "express";
-import * as asyncHandler from "express-async-handler";
-// import morgan from "morgan";
-import * as morgan from "morgan";
+// import { Express, Request, Response } from "express";
+import express from "express";
+import asyncHandler from "express-async-handler";
+// import * as asyncHandler from "express-async-handler";
+import morgan from "morgan";
+// import * as morgan from "morgan";
 import { login } from "./handlers/login.js";
 import { registerComplete, registerInit } from "./handlers/register.js";
 import {

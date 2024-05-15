@@ -1,7 +1,7 @@
-import { GenerateSignatureBody } from "@dfns/sdk/generated/wallets";
-import { Request, Response } from "express";
+// import { GenerateSignatureBody } from "@dfns/sdk/generated/wallets";
+// import { Request, Response } from "express";
 
-import { delegatedClient } from "../clients";
+import { delegatedClient } from "../clients.js";
 
 export const listWallets = async (req, res) => {
   const { appId, authToken } = req.body;

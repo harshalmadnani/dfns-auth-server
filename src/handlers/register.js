@@ -1,7 +1,6 @@
-import { UserAuthKind } from "@dfns/sdk/codegen/datamodel/Auth";
-import { Request, Response } from "express";
+// import { Request, Response } from "express";
 
-import { apiClient } from "../clients";
+import { apiClient } from "../clients.js";
 
 export const registerInit = async (req, res) => {
   // You can perform the registration flow of your system before starting the

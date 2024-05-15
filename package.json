@@ -2,10 +2,11 @@
   "name": "auth-delegated-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js","type": "module",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon",
-    "start:server": "node -r ts-node/register ./src/index.ts",
+    "start:server": "node ./src/index.js",
     "build": "tsc"
   },
   "keywords": [],
