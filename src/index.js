@@ -1,7 +1,7 @@
 import cors from "cors";
 // import * as cors from "cors";
 
-import * as dotenv from "dotenv";
+import dotenv from "dotenv";
 // import { Express, Request, Response } from "express";
 import express from "express";
 import asyncHandler from "express-async-handler";
