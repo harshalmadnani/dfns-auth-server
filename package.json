@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@biconomy/account": "^4.4.0",
+    "@dfns/lib-viem": "^0.4.3",
     "@dfns/sdk": "^0.4.3-alpha.2",
     "@dfns/sdk-keysigner": "^0.4.3-alpha.2",
     "cors": "^2.8.5",
@@ -20,7 +22,8 @@
     "express": "^4.18.2",
     "express-async-handler": "1.2.0",
     "fetch": "^1.1.0",
-    "morgan": "1.10.0"
+    "morgan": "1.10.0",
+    "viem": "^2.10.5"
   },
   "devDependencies": {
     "@types/cookie-parser": "1.4.3",
