@@ -36,6 +36,7 @@ app.post("/register/complete", asyncHandler(registerComplete));
 app.post("/wallets/list", asyncHandler(listWallets));
 app.post("/wallets/signatures/init", asyncHandler(generateSignatureInit));
 app.post("/wallets/scw", asyncHandler(getSmartAccountAddress));
+
 app.post(
   "/wallets/signatures/complete",
   asyncHandler(generateSignatureComplete)

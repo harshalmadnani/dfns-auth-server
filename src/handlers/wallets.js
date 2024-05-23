@@ -3,10 +3,10 @@
 
 import { apiClient, delegatedClient } from "../clients.js";
 import { DfnsWallet } from "@dfns/lib-viem";
-import { createSmartAccountClient } from "@biconomy/account";
-import { createWalletClient, http } from "viem";
+import { PaymasterMode, createSmartAccountClient } from "@biconomy/account";
+import { createWalletClient, encodeFunctionData, http, parseAbi } from "viem";
 import { toAccount } from "viem/accounts";
-import { polygon } from "viem/chains";
+import { arbitrum, base, mainnet, polygon } from "viem/chains";
 
 export const listWallets = async (req, res) => {
   const { appId, authToken } = req.body;
@@ -52,9 +52,7 @@ export const generateSignatureComplete = async (req, res) => {
     },
     signedChallenge
   );
-
   console.debug(signature);
-
   res.json(signature);
 };
 export const getSmartAccountAddress = async (req, res) => {
@@ -71,7 +69,7 @@ export const getSmartAccountAddress = async (req, res) => {
 
   const walletClient = createWalletClient({
     account: toAccount(dfnsWWalletSigner),
-    chain: [polygon],
+    chain: polygon,
     transport: http(),
   });
   console.log("viem client created recieved=====", walletClient);
@@ -85,7 +83,7 @@ export const getSmartAccountAddress = async (req, res) => {
   console.log("smart account client created =====", smartAccountClient);
 
   const scwAddress = await smartAccountClient.getAccountAddress();
-
+  console.log("smart account address created =====", scwAddress);
   // The exact request body is needed to complete the signature action. You can
   // choose the approach to maintain the state. In the example, it is simply passed
   // back in the response, and included in the generateSignatureComplete request.
