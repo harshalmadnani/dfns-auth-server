@@ -25,7 +25,7 @@ app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.use(express.json());
 
 app.get("/", (_, res) => {
-  res.send("Dfns SDK Tutorial Server");
+  res.send("Xade DFNS Prod Server");
 });
 
 app.post("/login", asyncHandler(login));
