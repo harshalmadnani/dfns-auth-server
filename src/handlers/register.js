@@ -28,7 +28,7 @@ export const registerComplete = async (req, res) => {
       // wallets: [{ network: "PolygonAmoy" }],
       wallets: [
         { network: "Polygon" },
-        { network: "Ethereum" },
+        { network: "Bsc" },
         { network: "Base" },
         { network: "ArbitrumOne" },
       ],
