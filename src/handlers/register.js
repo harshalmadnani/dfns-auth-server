@@ -25,7 +25,6 @@ export const registerComplete = async (req, res) => {
   const registration = await client.auth.registerEndUser({
     body: {
       ...signedChallenge,
-      // wallets: [{ network: "PolygonAmoy" }],
       wallets: [
         { network: "Polygon" },
         { network: "Bsc" },
@@ -34,8 +33,6 @@ export const registerComplete = async (req, res) => {
       ],
     },
   });
-
-  console.debug(registration);
 
   res.json(registration);
 };
