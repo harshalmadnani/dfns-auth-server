@@ -27,6 +27,8 @@ export const registerComplete = async (req, res) => {
       ...signedChallenge,
       wallets: [
         { network: "Polygon" },
+        { network: "Solana" },
+        { network: "AvalancheC" },
         { network: "Bsc" },
         { network: "Base" },
         { network: "ArbitrumOne" },
